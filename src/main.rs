@@ -1,3 +1,6 @@
+//FIXME add colors to output
+//FIXME add more special chars
+//FIXME add verbose flag
 use rand::Rng;
 
 use colored::*;
