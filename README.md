@@ -23,16 +23,41 @@ you might want to copy the `txt` files with the words into that dir
 cp words-en.txt target/release/
 cp words-es.txt target/release/
 ```
-If you want, you can make a link to your `/usr/bin`, this way you can use
-it from wherever in you system.
+(**NOTE** this will be fix in the near future, to make a more friendly
+approach)
 
-For example if you installed it in your home dir, you could do
+If you want, you can make a link to your `/usr/bin`, this way you can use
+it from wherever in your system.
+
+For example, if you installed it in your home dir, you could do
 ```bash
 ln -sf ~/pss.git/target/release/pss /usr/bin/
 ```
 
 ## usage
-![pss](images/pss.gif)
+![example](images/exampl.png)
+
+the most simple thing you can do is just
+```bash
+pss
+```
+this will build a password with the default ~350,000 english words, if you
+want to change language to spanish you can do:
+```bash
+pss --lang es
+```
+You could also use your file of words
+```bash
+pss -f my_words.txt
+```
+If you don't want special chars in your password, there is a flag for that:
+```bash
+pss -s
+```
+of course, to see all the options, you can do:
+```bash
+pss --help
+```
 
 ## help
 
@@ -57,3 +82,5 @@ OPTIONS:
 
 [rust]: https://doc.rust-lang.org/book/ch01-01-installation.html
 [cargo]: https://doc.rust-lang.org/book/ch01-03-hello-cargo.html#building-for-release
+
+
